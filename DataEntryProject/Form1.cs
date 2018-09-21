@@ -123,7 +123,20 @@ namespace DataEntryProject
                     case "txtZip":
                         btnAccept.Focus();
                         break;
+                }
+            }
 
+            if (textBoxSender.Equals("txtZip"))
+            {
+                if ((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == 8)
+                {
+                    // nothing to handle
+                    e.Handled = false;
+                }
+                else
+                {
+                    // block user from entering anything other than numbers and backspace
+                    e.Handled = true;
                 }
             }
         }
