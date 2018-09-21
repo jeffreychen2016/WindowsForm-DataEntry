@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbDataEntry = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -45,7 +46,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimer = new System.Windows.Forms.TextBox();
+            this.timTimer = new System.Windows.Forms.Timer(this.components);
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
             this.SuspendLayout();
@@ -179,7 +181,7 @@
             this.grbTimer.Controls.Add(this.btnStart);
             this.grbTimer.Controls.Add(this.btnPause);
             this.grbTimer.Controls.Add(this.btnExit);
-            this.grbTimer.Controls.Add(this.textBox1);
+            this.grbTimer.Controls.Add(this.txtTimer);
             this.grbTimer.Location = new System.Drawing.Point(453, 32);
             this.grbTimer.Name = "grbTimer";
             this.grbTimer.Size = new System.Drawing.Size(273, 341);
@@ -216,16 +218,21 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // textBox1
+            // txtTimer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(89, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "00:00:00";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimer.Location = new System.Drawing.Point(89, 34);
+            this.txtTimer.Name = "txtTimer";
+            this.txtTimer.ReadOnly = true;
+            this.txtTimer.Size = new System.Drawing.Size(100, 27);
+            this.txtTimer.TabIndex = 0;
+            this.txtTimer.Text = "00:00:00";
+            this.txtTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timTimer
+            // 
+            this.timTimer.Interval = 1000;
+            this.timTimer.Tick += new System.EventHandler(this.timTimer_Tick);
             // 
             // frmDataEntry
             // 
@@ -263,7 +270,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimer;
+        private System.Windows.Forms.Timer timTimer;
     }
 }
 

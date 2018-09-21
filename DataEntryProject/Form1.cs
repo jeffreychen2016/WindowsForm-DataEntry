@@ -12,6 +12,9 @@ namespace DataEntryProject
 {
     public partial class frmDataEntry : Form
     {
+        TimeSpan elapsedTime;
+        DateTime lastElapsed;
+
         public frmDataEntry()
         {
             InitializeComponent();
@@ -39,7 +42,12 @@ namespace DataEntryProject
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
+            btnStart.Enabled = false;
+            btnPause.Enabled = true;
+            timTimer.Enabled = true;
+            grbDataEntry.Enabled = true;
+            txtName.Focus();
+            lastElapsed = DateTime.Now;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -55,6 +63,14 @@ namespace DataEntryProject
             txtState.Clear();
             txtZip.Clear();
             txtName.Focus();
+        }
+
+        private void timTimer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime += DateTime.Now - lastElapsed;
+            lastElapsed = DateTime.Now;
+
+            txtTimer.Text = Convert.ToString(new TimeSpan(elapsedTime.Hours,elapsedTime.Minutes,elapsedTime.Seconds));
         }
     }
 }
