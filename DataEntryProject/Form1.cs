@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace DataEntryProject
 {
+    // code-along
     public partial class frmDataEntry : Form
     {
         TimeSpan elapsedTime;
