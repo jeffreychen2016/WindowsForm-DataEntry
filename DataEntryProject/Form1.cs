@@ -80,5 +80,25 @@ namespace DataEntryProject
             grbDataEntry.Enabled = false;
             timTimer.Enabled = false;
         }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            string dataEntry;
+            if (txtName.Text.Equals("") || txtAddress.Text.Equals("") || txtCity.Text.Equals("") ||
+                txtState.Text.Equals("") || txtZip.Text.Equals(""))
+            {
+                MessageBox.Show("Please fill in all fields!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
+                return;
+            }
+            else
+            {
+                dataEntry = txtName.Text + "\r\n" + txtAddress.Text + "\r\n" + txtCity.Text + "\r\n" + txtState.Text + "\r\n" + txtZip.Text;
+                MessageBox.Show(dataEntry, "Data Entry", MessageBoxButtons.OK);
+
+                // after display the message, clear the form
+                btnClear.PerformClick();
+            }
+        }
     }
 }
