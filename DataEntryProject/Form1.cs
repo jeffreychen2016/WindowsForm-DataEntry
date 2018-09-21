@@ -100,5 +100,32 @@ namespace DataEntryProject
                 btnClear.PerformClick();
             }
         }
+
+        private void txtInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var textBoxSender = ((TextBox)sender).Name;
+            if (e.KeyChar == 13)
+            {
+                switch (textBoxSender)
+                {
+                    case "txtName":
+                        txtAddress.Focus();
+                        break;
+                    case "txtAddress":
+                        txtCity.Focus();
+                        break;
+                    case "txtCity":
+                        txtState.Focus();
+                        break;
+                    case "txtState":
+                        txtZip.Focus();
+                        break;
+                    case "txtZip":
+                        btnAccept.Focus();
+                        break;
+
+                }
+            }
+        }
     }
 }

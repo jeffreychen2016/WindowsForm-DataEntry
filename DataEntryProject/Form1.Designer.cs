@@ -101,6 +101,7 @@
             this.txtZip.Size = new System.Drawing.Size(166, 22);
             this.txtZip.TabIndex = 5;
             this.txtZip.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtState
             // 
@@ -108,6 +109,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(166, 22);
             this.txtState.TabIndex = 4;
+            this.txtState.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtCity
             // 
@@ -116,6 +118,7 @@
             this.txtCity.Size = new System.Drawing.Size(166, 22);
             this.txtCity.TabIndex = 3;
             this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtAddress
             // 
@@ -123,6 +126,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(166, 22);
             this.txtAddress.TabIndex = 2;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtName
             // 
@@ -131,6 +135,7 @@
             this.txtName.Size = new System.Drawing.Size(166, 22);
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label5
             // 
