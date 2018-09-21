@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.grbDataEntry = new System.Windows.Forms.GroupBox();
-            this.grbTimer = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.txtZip = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grbTimer = new System.Windows.Forms.GroupBox();
             this.btnStart = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grbDataEntry.SuspendLayout();
             this.grbTimer.SuspendLayout();
             this.SuspendLayout();
@@ -72,63 +72,24 @@
             this.grbDataEntry.Text = "Data Entry";
             this.grbDataEntry.Enter += new System.EventHandler(this.grbDataEntry_Enter);
             // 
-            // grbTimer
+            // btnClear
             // 
-            this.grbTimer.Controls.Add(this.btnStart);
-            this.grbTimer.Controls.Add(this.btnPause);
-            this.grbTimer.Controls.Add(this.btnExit);
-            this.grbTimer.Controls.Add(this.textBox1);
-            this.grbTimer.Location = new System.Drawing.Point(453, 32);
-            this.grbTimer.Name = "grbTimer";
-            this.grbTimer.Size = new System.Drawing.Size(273, 341);
-            this.grbTimer.TabIndex = 1;
-            this.grbTimer.TabStop = false;
-            this.grbTimer.Text = "Timer";
+            this.btnClear.Location = new System.Drawing.Point(192, 278);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 36);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label1
+            // btnAccept
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "City";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "State";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Zip";
+            this.btnAccept.Location = new System.Drawing.Point(25, 278);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(75, 36);
+            this.btnAccept.TabIndex = 6;
+            this.btnAccept.Text = "&Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
             // 
             // txtZip
             // 
@@ -168,59 +129,103 @@
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // btnAccept
+            // label5
             // 
-            this.btnAccept.Location = new System.Drawing.Point(25, 278);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(75, 23);
-            this.btnAccept.TabIndex = 6;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Zip";
             // 
-            // btnClear
+            // label4
             // 
-            this.btnClear.Location = new System.Drawing.Point(192, 278);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "State";
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "City";
             // 
-            // btnExit
+            // label2
             // 
-            this.btnExit.Location = new System.Drawing.Point(103, 278);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Address";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
+            // 
+            // grbTimer
+            // 
+            this.grbTimer.Controls.Add(this.btnStart);
+            this.grbTimer.Controls.Add(this.btnPause);
+            this.grbTimer.Controls.Add(this.btnExit);
+            this.grbTimer.Controls.Add(this.textBox1);
+            this.grbTimer.Location = new System.Drawing.Point(453, 32);
+            this.grbTimer.Name = "grbTimer";
+            this.grbTimer.Size = new System.Drawing.Size(273, 341);
+            this.grbTimer.TabIndex = 1;
+            this.grbTimer.TabStop = false;
+            this.grbTimer.Text = "Timer";
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(103, 85);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 37);
+            this.btnStart.TabIndex = 8;
+            this.btnStart.Text = "&Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnPause
             // 
             this.btnPause.Location = new System.Drawing.Point(103, 128);
             this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(75, 23);
+            this.btnPause.Size = new System.Drawing.Size(75, 38);
             this.btnPause.TabIndex = 9;
-            this.btnPause.Text = "Pause";
+            this.btnPause.Text = "&Pause";
             this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // btnStart
+            // btnExit
             // 
-            this.btnStart.Location = new System.Drawing.Point(103, 74);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 8;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnExit.Location = new System.Drawing.Point(103, 278);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 36);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(89, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 27);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "00:00:00";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmDataEntry
             // 
