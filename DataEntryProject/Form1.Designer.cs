@@ -83,6 +83,8 @@
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnClear.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // btnAccept
             // 
@@ -93,6 +95,8 @@
             this.btnAccept.Text = "&Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btnAccept.MouseLeave += new System.EventHandler(this.btnButtons_Leave);
+            this.btnAccept.MouseHover += new System.EventHandler(this.btnButtons_Hover);
             // 
             // txtZip
             // 

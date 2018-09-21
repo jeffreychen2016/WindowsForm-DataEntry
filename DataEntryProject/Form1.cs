@@ -140,5 +140,15 @@ namespace DataEntryProject
                 }
             }
         }
+
+        private void btnButtons_Hover(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Aqua;
+        }
+
+        private void btnButtons_Leave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = SystemColors.Control;
+        }
     }
 }
