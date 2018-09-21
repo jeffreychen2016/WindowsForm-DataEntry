@@ -72,5 +72,13 @@ namespace DataEntryProject
 
             txtTimer.Text = Convert.ToString(new TimeSpan(elapsedTime.Hours,elapsedTime.Minutes,elapsedTime.Seconds));
         }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            btnStart.Enabled = true;
+            btnPause.Enabled = false;
+            grbDataEntry.Enabled = false;
+            timTimer.Enabled = false;
+        }
     }
 }
